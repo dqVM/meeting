@@ -4,11 +4,11 @@
 * Metrics Collector: Meter
 	used to measure the rate of messages 
 * Inject Location
-	## Outcoming Messages: publishing 
+	* Outcoming Messages: publishing 
 	Package:
-	* nsx/mp/proton/internal-framwork
+		* nsx/mp/proton/internal-framwork
 
-	* nsx/management/messaging/publising/PublishManageer.java
+		* nsx/management/messaging/publising/PublishManageer.java
 
 	```
 	private SendResult send(List<Broker> brokers, Message amqpMessage, String exchangeName, String routingKey,
@@ -23,10 +23,10 @@
         }
 	```
 
-	## Incoming Message : subscribing 
-	* nsx/mp/proton/internal-framwork
+	* Incoming Message : subscribing 
+		* nsx/mp/proton/internal-framwork
 
-	* nsx/management/messaging/subscribing/SubscriptionManager/
+		* nsx/management/messaging/subscribing/SubscriptionManager/
 
 	```
 
