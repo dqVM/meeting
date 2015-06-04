@@ -1,4 +1,5 @@
-#Disscussion about aritecture and storage 
+#2th Disscussion
+Meeting members: Alex Nhu, Sangamesh, Dongqing, Medhabi 
 ## Aggregated Server for persistent data stroage or Direct pushing data to PhoneHome 
 ### For query support and future extension, aggregated centerized server is needed 
 ## Local file storage for storing collected metrics 
