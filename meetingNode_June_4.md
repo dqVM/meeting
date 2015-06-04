@@ -11,7 +11,8 @@ Meeting members: Alex Nhu, Sangamesh, Dongqing, Medhabi
 * MemTable 
 * BigQueue 
 * LevelDB
-	*LevelDB is a fast key-value storage library written at Google 
+
+	**LevelDB is a fast key-value storage library written at Google 
 	that provides an ordered mapping from string keys to string values.
 #### Commmunicaton between Centerialzed server/ PhoneHome<--- Client [Local Damon]
 ## Option A: DCM injected tracking componenet or Local Damon [querying from GemFire]
