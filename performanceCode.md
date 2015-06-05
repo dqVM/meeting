@@ -44,3 +44,24 @@
             }
         }
 	```
+###Incoming/outcoming RPC calss waiting for respondence, total and per application, sample per minute, maintains last N samples, average/max last 1 days, last 12 hours , last 1 hours, etc 
+
+* Type of Metrics Collector: Meter
+    used to measure the rate of RPC calss waiting for respondence
+* Inject Location
+    * RpcManager
+    Package:
+        * nsx/mp/proton/internal-framwork
+
+        * nsx/management/messaging/rpc/RpcManager
+    ```
+    public class RpcManager extends AbstractSmartLifecycle{
+         // all the outgoingRequest kept inn the map until receive ACK 
+         private final ConcurrentMap<String, ExpiringRpcRequest> outgoingRequestMap = new ConcurrentHashMap<String, ExpiringRpcRequest>();
+         private final ConcurrentMap<String, ExpiringRpcRequest> incomingRequestMap = new ConcurrentHashMap<String, ExpiringRpcRequest>();
+         private final DelayQueue<ExpiringRpcRequest> rpcRequestExpirationQueue = new DelayQueue<ExpiringRpcRequest>();
+         // one injected collector: Counter.set(outgoingRequestMap.size()) is enough 
+    }   
+    ```
+
+    
